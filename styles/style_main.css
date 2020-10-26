@@ -1,0 +1,332 @@
+
+body, header{
+    width: 100%;
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+    background-color:#f1f1f1;
+}
+/* mobile header */
+
+.header{
+    height:auto;
+}
+/* mobile menu */
+nav{
+    height: 100%;
+    margin:10px 0;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+.hidden{
+    width: 90%;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    transition: all .5s ease-in-out;
+}
+.active_menu{
+    visibility: visible;
+    opacity: 1;
+    height: 200px;
+    transition: all 1s ease-in-out;
+}
+.menu > li {
+    position: relative;
+}
+.menu > li > a{
+    text-decoration: none;
+    color:#f1f1f1;
+    text-transform: uppercase;
+    display: block;
+    padding:10px 0;
+}
+.menu > li:after{
+    position: absolute;
+    content: "";
+    bottom:0;
+    left:0;
+    width: 0;
+    height: 2px;
+    background-color: #f1f1f1;
+    transition: all .5s ease-in-out;
+}
+.menu > li:hover:after{
+    width: 100%;
+}
+
+/* gamburger menu */
+.navigation{
+    width: 70px;
+    height: 60px;
+    background-color: rgba(0,0,0,1);
+    position: relative;
+    margin:10px 0;
+    
+}
+.navigation span{
+    position: absolute;
+    top:0;
+    left: 10px;
+    right: 10px;
+    display: block;
+    height: 1px;
+    background-color: #f1f1f1;
+}
+.navigation span:first-child{
+    top:13px;
+    transition: all 0.5s ease-in;
+}
+.navigation span:nth-child(2){
+    top:29px;
+    transition: all 0.5s ease-in;
+}
+.navigation span:nth-child(3){
+    top:45px;
+    transition: all 0.5s ease-in;
+
+}
+/* active menu mobile */
+.navigation.active span:first-child{
+    top:50%;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in;
+}
+.navigation.active span:nth-child(2){
+    display: none;
+    transition: all 0.5s ease-in;
+}
+.navigation.active span:nth-child(3){
+    top:50%;
+    transform:rotate(-45deg) ;
+    transition: all 0.5s ease-in;
+}
+
+/* main */
+.main{
+    height: 100%;
+    background-color: #030305;
+    background-image: url("https://www.transparenttextures.com/patterns/graphy-dark.png");
+
+    background-attachment: fixed;
+}
+.main_row{
+    flex-direction: column;
+}
+/* slider image */
+.slider_img{
+    position: relative;
+}
+.slider_img img{
+    width: 100%;
+    height: 400px;
+}
+.pic_portfolio{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom:-100px;
+    left: 50%;
+    transform:translate(-50%,0);
+}
+.pic_portfolio img{
+    width: 90%;
+    height: 100%;
+}
+
+/* descriptions */
+
+.box_title{
+    margin-top: 100px;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+.title_page p{
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+.name{
+    font-size: 35px;
+    font-weight: 500;
+}
+.title_page p:nth-child(2){
+    font-size: 20px;
+}
+.icons_soc_network ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons_soc_network ul > li >a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+}
+.icons_soc_network ul > li > a:hover{
+    color:rgba(177, 177, 177, 0.5);
+    transition: .3s ease-in-out;
+}
+
+/* about me */
+.about_me{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align:center;
+    letter-spacing: 1px;
+}
+
+/* education */
+
+.education_box, .technical_box, .soft_box{
+    margin-top:100px;
+    background-color: rgba(0,0,0,.5);
+}
+.title_box{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding:40px 0;
+    background-color: rgba(177, 177, 177, 0.39);
+}
+.list_of_items{
+    padding-bottom: 35px;
+    padding-top: 20px;
+}
+.list_of_items li{
+    position: relative;
+    padding: 30px 30px;
+    font-size: 20px;
+    color:white
+}
+.list_of_items li:before{
+    content:"";
+    position: absolute;
+    left:0;
+    transition: .3s ease-in-out;
+    top:30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+.list_of_items li:after{
+    position: absolute;
+  border-left: 1px dotted #4F5151;
+  width: 1px;
+  bottom: -12px;
+  content: "";
+  left: 4px;
+  top: 43px;
+}
+.list_of_items li:hover:before{
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.2)
+}
+
+/* portfolio */
+.title_row{
+    padding-top: 100px;
+}
+.portfolio_row{
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 100px
+}
+.portfolio_box{
+    background-color: rgba(0,0,0,.5);
+    padding-bottom: 100px;
+}
+.modest, .pet_paws, .Sparse_Arhitecture, .check_box{
+    width: 100%;
+    height: 500px;
+}
+.img_site{
+    width: 100%;
+    height: 300px;
+}
+.img_site img{
+    height: 100%;
+    width: 100%;
+}
+.description_site p{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    display: block;
+    padding:20px;
+    font-size: 20px;
+}
+
+.description_site span{
+    display: block;
+    color:rgba(177, 177, 177, 1);
+    text-align: center;
+}
+
+
+
+/* Tablet */
+@media(min-width:768px){
+    header{
+        background-color: rgb(0,0,0);
+    }
+    .navigation{
+        display: none;
+    }
+    .hidden{
+        width: 100%;
+        visibility: visible;
+        position: static;
+        opacity: 1;
+        height: 80px;
+        /* transition: all .5s ease-in-out; */
+    }
+    .menu{
+        flex-direction: row;
+    }
+    .pic_portfolio{
+        width: 250px;
+        height: 250px;
+        bottom:-125px;
+    }
+    .box_title{
+        margin-top: 130px;
+    }
+    .img_site{
+        width: 100%;
+        height: 450px;
+    }
+    .modest, .pet_paws, .Sparse_Arhitecture, .check_box{
+        height: 450px;
+    }
+    
+}
+
+/* Laptop */
+@media(min-width:992px){
+    .education_box, .technical_box{
+        padding: 0 20px;
+    }
+    .portfolio_row{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .img_site{
+        width: 100%;
+        height: 300px;
+    }
+    .modest, .pet_paws, .Sparse_Arhitecture, .check_box{
+        height: 300px;
+    }
+    .portfolio_box{
+        padding-bottom: 120px;
+    }
+}
