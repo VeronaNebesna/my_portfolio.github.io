@@ -1,12 +1,15 @@
 
 body, header{
     width: 100%;
-    height: 100%;
     font-family: 'Playfair Display', serif;
     background-color:#f1f1f1;
 }
 /* mobile header */
-
+header{
+    position: fixed;
+    top:0;
+    z-index: 10;
+}
 .header{
     height:auto;
 }
@@ -203,14 +206,14 @@ nav{
 }
 .list_of_items li{
     position: relative;
-    padding: 30px 30px;
+    padding: 30px 80px;
     font-size: 20px;
     color:white
 }
 .list_of_items li:before{
     content:"";
     position: absolute;
-    left:0;
+    left:30px;
     transition: .3s ease-in-out;
     top:30px;
     width: 10px;
@@ -224,7 +227,7 @@ nav{
   width: 1px;
   bottom: -12px;
   content: "";
-  left: 4px;
+  left: 34px;
   top: 43px;
 }
 .list_of_items li:hover:before{
@@ -270,6 +273,21 @@ nav{
     color:rgba(177, 177, 177, 1);
     text-align: center;
 }
+/* arrow up */
+
+
+.arrow_up{
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    color:white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+
 
 
 

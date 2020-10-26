@@ -19,6 +19,8 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+
 /* Mobile */
 @media(max-width:767px){ 
     .col-xs-12{

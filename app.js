@@ -90,14 +90,8 @@ function draw(){
 }
 requestAnimationFrame(draw);
 
-// // animate jquery
-// $(".div_for_canvas").click(function(){
-//     $(this).animate({
-//         opacity:0,       
-//     },1000, "linear")
-// } )
 
-
+// active mobile menu
 $(".navigation").click(function(){
     $(this).toggleClass("active");
     if($(".navigation").hasClass("active")){
@@ -110,6 +104,8 @@ $(".navigation").click(function(){
     }
 })
 
+
+// scroll menu
 $(document).ready(function(){
     $("nav li a").click(function () { 
     elementClick = $(this).attr("href");
@@ -118,3 +114,10 @@ $(document).ready(function(){
 }, 800); 
 }) }) 
 
+
+// arrow up
+$(".arrow_up").click(function(){
+    $("body,html").animate({
+            scrollTop:0
+    }, 400)
+})
