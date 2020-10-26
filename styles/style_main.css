@@ -239,7 +239,7 @@ nav{
 
 /* portfolio */
 .title_row{
-    padding-top: 100px;
+    margin-top: 100px;
 }
 .portfolio_row{
     flex-direction: column;
