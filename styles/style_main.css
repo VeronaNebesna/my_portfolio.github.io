@@ -188,8 +188,10 @@ nav{
 }
 
 /* education */
-
-.education_box, .technical_box, .soft_box{
+.technical_box{
+    background-color: rgba(0,0,0,.5);
+}
+.education_box,  .soft_box{
     margin-top:100px;
     background-color: rgba(0,0,0,.5);
 }
@@ -197,6 +199,7 @@ nav{
     font-size: 30px;
     color: white;
     text-align: center;
+    margin-top:100px;
     padding:40px 0;
     background-color: rgba(177, 177, 177, 0.39);
 }
@@ -240,11 +243,12 @@ nav{
 }
 .portfolio_row{
     flex-direction: column;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     padding-bottom: 100px
 }
 .portfolio_box{
     background-color: rgba(0,0,0,.5);
+    padding-top: 50px;
     padding-bottom: 100px;
 }
 .modest, .pet_paws, .Sparse_Arhitecture, .check_box{
@@ -325,14 +329,15 @@ nav{
     .modest, .pet_paws, .Sparse_Arhitecture, .check_box{
         height: 450px;
     }
+    .technical_box{
+        display: flex;
+        flex-direction: row;
+    }
     
 }
 
 /* Laptop */
 @media(min-width:992px){
-    .education_box, .technical_box{
-        padding: 0 20px;
-    }
     .portfolio_row{
         flex-direction: row;
         flex-wrap: wrap;
