@@ -177,7 +177,10 @@ nav{
     color:rgba(177, 177, 177, 0.5);
     transition: .3s ease-in-out;
 }
-
+.description{
+    line-height: 30px;
+    font-size: 20px;
+}
 /* about me */
 .about_me{
     font-size: 20px;
