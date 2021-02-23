@@ -189,46 +189,8 @@ nav{
     text-align:center;
     letter-spacing: 1px;
 }
-/* work experience */
-.resp p{
-    font-weight: 600;
-}
-.resp span{
-    display: block;
-    margin-left: 10px;
-}
-.work_exp{
-    color:white;
-    line-height: 30px;
-    font-size: 20px;
-    padding:30px
-}
-.work_exp p{
-    padding:10px 0;
-}
-.list_resp li{
-    position: relative;
-    margin-left: 50px;
-}
-.list_resp li:before{
-    content: "-";
-    position: absolute;
-    left:0;
-    margin-left: -20px;
-}
-.flex{
-    display: flex;
-    align-items: center;
-}
-/* education */
-.technical_box{
-    background-color: rgba(0,0,0,.5);
-}
-.education_box,  .soft_box{
-    margin-top:100px;
-    background-color: rgba(0,0,0,.5);
-}
 .title_box{
+    width: 100%;
     font-size: 30px;
     color: white;
     text-align: center;
@@ -236,50 +198,12 @@ nav{
     padding:40px 0;
     background-color: rgba(177, 177, 177, 0.39);
 }
-.list_of_items{
-    padding-bottom: 35px;
-    padding-top: 20px;
-}
-.list_of_items li{
-    position: relative;
-    padding: 30px 80px;
-    font-size: 20px;
-    color:white
-}
-.list_of_items li:before{
-    content:"";
-    position: absolute;
-    left:30px;
-    transition: .3s ease-in-out;
-    top:30px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: white;
-}
-.list_of_items li:after{
-    position: absolute;
-  border-left: 1px dotted #4F5151;
-  width: 1px;
-  bottom: -12px;
-  content: "";
-  left: 34px;
-  top: 43px;
-}
-.list_of_items li:hover:before{
-    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.2)
-}
 
 /* portfolio */
-.title_row{
-    margin-top: 100px;
-}
+
 .portfolio_row{
     flex-direction: column;
-    /* padding-top: 50px; */
-    padding-bottom: 100px
-}
-.portfolio_row{
+    padding-bottom: 100px;
     background-color: rgba(0,0,0,.5);
 }
 .portfolio_box{
@@ -294,9 +218,16 @@ nav{
     width: 100%;
     height: 300px;
 }
-.img_site img{
+ .img_site a img{
     height: 100%;
     width: 100%;
+    margin: 0 auto;
+    display: block;
+    transition:all .5s ease;
+}
+.img_site a img:hover{
+    filter: drop-shadow(10px 10px 20px rgba(255, 255, 255, 0.2));
+    transition:all .5s ease;
 }
 .description_site p{
     text-decoration: none;
@@ -306,15 +237,12 @@ nav{
     padding:20px;
     font-size: 20px;
 }
-
 .description_site span{
     display: block;
     color:rgba(177, 177, 177, 1);
     text-align: center;
 }
 /* arrow up */
-
-
 .arrow_up{
     width: 50px;
     height: 50px;
@@ -325,10 +253,6 @@ nav{
     right: 0;
     cursor: pointer;
 }
-
-
-
-
 
 /* Tablet */
 @media(min-width:768px){
@@ -352,7 +276,7 @@ nav{
         flex-direction: row;
     }
     .pic_portfolio img{
-      transform: scale(0.5);
+        transform: scale(0.5);
     }
     .box_title{
         margin-top: 130px;
@@ -379,6 +303,12 @@ nav{
     }
     .portfolio_desc{
         flex-direction: row;
+    }
+    .img_site a img{
+        height: 100%;
+        width: 60%;
+        margin: 0 auto;
+        display: block;
     }
     .img_site{
         width: 100%;
