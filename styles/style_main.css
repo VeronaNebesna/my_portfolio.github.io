@@ -190,7 +190,13 @@ nav{
     letter-spacing: 1px;
 }
 /* work experience */
-
+.resp p{
+    font-weight: 600;
+}
+.resp span{
+    display: block;
+    margin-left: 10px;
+}
 .work_exp{
     color:white;
     line-height: 30px;
@@ -199,9 +205,21 @@ nav{
 }
 .work_exp p{
     padding:10px 0;
-
 }
-
+.list_resp li{
+    position: relative;
+    margin-left: 50px;
+}
+.list_resp li:before{
+    content: "-";
+    position: absolute;
+    left:0;
+    margin-left: -20px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
 /* education */
 .technical_box{
     background-color: rgba(0,0,0,.5);
